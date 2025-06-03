@@ -12,7 +12,7 @@ locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')
 st.set_page_config(layout='wide')
 st.title("Relatório de Performance")    
 
-registro_df = pd.read_excel(r"C:\Users\Lorran Reymond\Documentos Trabalho\Consultorias\Companhia\COMPANHIA BARBER 2.xlsx", sheet_name='Registro')
+registro_df = pd.read_excel(r"COMPANHIA BARBER 2.xlsx", sheet_name='Registro')
 
 # preco_formato_preco = locale.currency(acao_preco, grouping=True)
 # compra_formato_preco = locale.currency(acao_compra_preco, grouping=True)
@@ -112,16 +112,16 @@ c.subheader(meses_atual, divider='orange')
 colA, colB, colC, colD, colE, colF = c.columns(6, vertical_alignment="center")
 
 
-colA.image(r'C:\Python\banco_de_dados\imagens\Dinheiro Verde.png', width=75)
+colA.image(r'imagens\Dinheiro Verde.png', width=75)
 #colB.metric("Receitas", receitas_atual_forma)
 colB.markdown(f'<p class="metric-text">Receitas</p>', unsafe_allow_html=True)
 colB.markdown(f'<p class="metric-value">{receitas_atual_forma}</p>', unsafe_allow_html=True)
 # colC.markdown(f'<p class="metric-text">Compra</p>', unsafe_allow_html=True)
 # colC.markdown(f'<p class="metric-value">{compra_formato_preco}</p>', unsafe_allow_html=True)
-colC.image(r'C:\Python\banco_de_dados\imagens\Dinheiro vermelho.png', width=75)
+colC.image(r'Dinheiro vermelho.png', width=75)
 colD.markdown(f'<p class="metric-text">Despesas</p>', unsafe_allow_html=True)
 colD.markdown(f'<p class="metric-value">{despesas_atual_forma}</p>', unsafe_allow_html=True)
-colE.image(r'C:\Python\banco_de_dados\imagens\saldo.png', width=75)
+colE.image(r'imagens\saldo.png', width=75)
 colF.markdown(f'<p class="metric-text">Saldo Atual</p>', unsafe_allow_html=True)
 colF.markdown(f'<p class="metric-value">{saldo_atual_forma}</p>', unsafe_allow_html=True)
 
