@@ -12,7 +12,7 @@ locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')
 st.set_page_config(layout='wide')
 st.title("Relatório de Performance")    
 
-registro_df = pd.read_excel("COMPANHIA_BARBER.xlsx", sheet_name='Registro')
+registro_df = pd.read_excel("..\COMPANHIA_BARBER.xlsx", sheet_name='Registro')
 
 # preco_formato_preco = locale.currency(acao_preco, grouping=True)
 # compra_formato_preco = locale.currency(acao_compra_preco, grouping=True)
